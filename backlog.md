@@ -32,7 +32,7 @@ Source: [project_spec.md](project_spec.md). Language: Python (CLI scripts). v1 M
 - [ ] Set `created_date`, `updated_date`, and `is_draft` automatically.
 - [ ] Implement `show` command for a single CR.
 - [ ] Implement `update` command for editable fields; refresh `updated_date`. *(FR-6)*
-- [ ] Implement `list` command with filters: sub-project, status, priority, owner. *(FR-6)*
+- [x] Implement `list` command with filters: sub-project, status, priority, owner. *(FR-6)*
 - [ ] Validate `jira_url` and `document_links` as URLs.
 
 ### Status lifecycle and history
