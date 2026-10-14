@@ -6,7 +6,7 @@ from pathlib import Path
 from typing import Sequence
 
 from .filtering import filter_crs
-from .storage import REGISTRY_FIELDS, read_registry
+from .storage import REGISTRY_FIELDS, read_registry, serialize_csv_value
 
 
 DEFAULT_CONFIG = Path("cr-registry") / "config.json"
@@ -70,5 +70,7 @@ def main(argv: Sequence[str] | None = None) -> int:
     for record in matching_records:
         output_record = dict(record)
         output_record["is_draft"] = "true" if record["is_draft"] else "false"
-        writer.writerow(output_record)
+        writer.writerow(
+            {key: serialize_csv_value(value) for key, value in output_record.items()}
+        )
     return 0
