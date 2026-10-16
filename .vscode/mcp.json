@@ -32,6 +32,10 @@
         "-File",
         "${workspaceFolder}/.vscode/mcp-calculator.ps1"
       ]
+    },
+    "github": {
+      "type": "http",
+      "url": "https://api.githubcopilot.com/mcp/"
     }
   }
 }
